@@ -16,4 +16,4 @@ USE example;
 -- если таблица существует, удаляем ее (в уроке эта команда есть в примере)
 drop table if exists users;
 -- создание таблицы users
-create table users (id SERIAL, name VARCHAR(100) NOT NULL UNIQUE);
+create table users (id SERIAL, name VARCHAR(100) NOT NULL);
