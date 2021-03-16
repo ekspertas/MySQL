@@ -1,0 +1,21 @@
+-- Создайте дамп базы данных example из предыдущего задания
+
+-- команда для создания дампа вводится из командной строки Windows
+
+mysqldump example > example.sql
+
+-- разверните содержимое дампа в новую базу данных sample
+
+-- заходим в клиент sql и создаем новую базу данных sample
+
+CREATE DATABASE sample;
+
+-- выходим из клиента sql обратно в командную строку Windows и
+-- переносим из дампа example.sql БД example в БД sample
+
+mysql sample < example.sql
+
+-- создаем дамп единственной таблицы help_keyword базы данных mysql из командной стороки Windows
+-- дамп содержит только первые 100 строк таблицы, т.к. указан параметр --where="1 limit 100"
+
+mysqldump mysql help_keyword --where="1 limit 100" > mysql_help_keyword_100.sql
